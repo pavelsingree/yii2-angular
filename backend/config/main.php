@@ -9,15 +9,20 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
+    'defaultRoute' => 'site/site/index',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'site' => [
+            'isBackend' => true,
+        ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
+            'loginUrl' => ['site/site/login'],
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
@@ -35,7 +40,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site/site/error',
         ],
         /*
         'urlManager' => [

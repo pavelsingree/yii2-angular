@@ -2,7 +2,7 @@
 namespace frontend\tests\unit\models;
 
 use common\fixtures\User as UserFixture;
-use frontend\models\SignupForm;
+use modules\site\models\frontend\SignupForm;
 
 class SignupFormTest extends \Codeception\Test\Unit
 {
