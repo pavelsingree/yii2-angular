@@ -14,6 +14,18 @@ return [
     'modules' => [
         'site' => [
             'isBackend' => true,
+        ],
+        'cars' => [
+            'isBackend' => true,
+        ],
+        'lease' => [
+            'isBackend' => true,
+        ],
+        'seo' => [
+            'isBackend' => true,
+        ],
+        'users' => [
+            'isBackend' => true,
         ]
     ],
     'components' => [
