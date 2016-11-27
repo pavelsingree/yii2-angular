@@ -1,5 +1,5 @@
 <?php
-namespace modules\seo;
+namespace modules\cars;
 use yii\base\BootstrapInterface;
 
 class Bootstrap implements BootstrapInterface
@@ -11,9 +11,7 @@ class Bootstrap implements BootstrapInterface
     {
         $app->getUrlManager()->addRules(
             [
-                [
-                    'class' => 'modules\seo\components\UrlRule',
-                ],
+                // rules definition
             ]
         );
     }

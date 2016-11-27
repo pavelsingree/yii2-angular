@@ -1,3 +1,7 @@
+<?php
+//$this->title = \modules\seo\helpers\Meta::all('lease', $model);
+?>
+
 <div class="lease-default-index">
     <h1><?= $this->context->action->uniqueId ?></h1>
     <p>

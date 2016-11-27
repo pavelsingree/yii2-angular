@@ -1,5 +1,5 @@
 <?php
-namespace modules\seo;
+namespace modules\site;
 use yii\base\BootstrapInterface;
 
 class Bootstrap implements BootstrapInterface
@@ -11,9 +11,9 @@ class Bootstrap implements BootstrapInterface
     {
         $app->getUrlManager()->addRules(
             [
-                [
-                    'class' => 'modules\seo\components\UrlRule',
-                ],
+                // rules definition
+                '/' => 'site/site/index',
+                '<_a:(about|contact)>' => 'site/site/<_a>'
             ]
         );
     }

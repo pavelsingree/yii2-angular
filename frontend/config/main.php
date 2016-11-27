@@ -9,11 +9,19 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'modules\site\Bootstrap',
+        'modules\users\Bootstrap',
+        'modules\cars\Bootstrap',
+        'modules\lease\Bootstrap',
+        'modules\seo\Bootstrap'
+    ],
     'defaultRoute' => 'site/site/index',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'baseUrl' => '',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -36,14 +44,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            //'enableStrictParsing' => true
         ],
-        */
     ],
     'params' => $params,
 ];
