@@ -11,7 +11,11 @@ class Bootstrap implements BootstrapInterface
     {
         $app->getUrlManager()->addRules(
             [
-                // rules definition
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['leases' => 'lease/api'],
+                    'prefix' => 'api'
+                ]
             ]
         );
     }
