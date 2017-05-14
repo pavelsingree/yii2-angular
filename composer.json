@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "bower-asset/angular": "^1.5",
         "bower-asset/angular-animate": "^1.5",
-        "bower-asset/angular-bootstrap": "^2.2"
+        "bower-asset/angular-bootstrap": "^2.2",
+        "abraham/twitteroauth": "^0.7.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

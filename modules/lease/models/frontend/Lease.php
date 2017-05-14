@@ -72,4 +72,16 @@ class Lease extends ActiveRecord
         ];
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'timestampBehavior' => [
+                'class' => yii\behaviors\TimestampBehavior::className(),
+            ],
+            \modules\autoposting\behaviors\AutopostingBehavior::className(),  // Autoposting behavior
+        ];
+    }
 }
